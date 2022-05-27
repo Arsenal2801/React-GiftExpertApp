@@ -4,13 +4,13 @@ import { GifGridItem } from './GifGridItem';
 
 const GifGrid = ({ category }) => {
 
-    const { data:imgs, loading } = useFetchGifs(category);
+    const { data: imgs, loading } = useFetchGifs(category);
 
 
 
     return (
         <>
-            <h3>{category}</h3>
+            <h3 className="animate__animated animate__fadeIn"> {category} </h3>
 
             {loading && <p className="animate__animated animate__flash">Loading...</p>}
 
