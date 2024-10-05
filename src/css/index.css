@@ -1,40 +1,138 @@
+/* Global styles */
 * {
-  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  /* Fuente moderna */
 }
 
 body {
   padding: 60px;
-}
-input{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  background-color: #eaeaea;
+  /* Fondo suave y claro */
+  color: #444;
+  /* Color de texto general */
 }
 
+/* Category container styles */
+.category-container {
+  padding: 20px;
+}
+
+.category {
+  background-color: #007bff;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  padding: 10px 15px;
+  /* Espacio interno */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  font-size: 16px;
+  /* Tamaño del texto */
+  text-align: center;
+  /* Centrado */
+  cursor: pointer;
+  /* Cambia el cursor al pasar */
+  transition: background-color 0.3s;
+  /* Efecto de transición */
+}
+
+.category:hover {
+  background-color: #0056b3;
+  /* Color al pasar el mouse */
+}
+
+/* Heading styles */
+h2 {
+  font-size: 28px;
+  /* Tamaño del texto */
+  color: #333;
+  /* Color del texto */
+  margin-bottom: 20px;
+  /* Espacio debajo */
+  text-align: center;
+  /* Centrado */
+  text-transform: uppercase;
+  /* Texto en mayúsculas */
+  letter-spacing: 1px;
+  /* Espaciado entre letras */
+}
+
+h3 {
+  font-size: 22px;
+  /* Tamaño del texto */
+  color: #555;
+  /* Color del texto */
+  margin-bottom: 15px;
+  /* Espacio debajo */
+  text-align: left;
+  /* Alineación a la izquierda */
+  font-weight: 500;
+  /* Peso de la fuente */
+}
+
+/* Input styles */
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #007bff;
+  /* Color de borde azul */
+  border-radius: 4px;
+  transition: border-color 0.3s;
+  /* Efecto de transición */
+}
+
+input:focus {
+  border-color: #0056b3;
+  /* Color de borde al enfocar */
+  outline: none;
+  /* Sin contorno */
+}
+
+/* Card grid styles */
 .card-grid {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  gap: 20px;
+  /* Espaciado entre las tarjetas */
 }
 
+/* Card styles */
 .card {
-  align-content: center;
-  border: 1px solid grey;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  background-color: white;
+  /* Fondo blanco para las tarjetas */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
   overflow: hidden;
+  flex: 1 1 calc(30% - 20px);
+  /* Tres columnas con espacio */
+  min-width: 250px;
+  /* Mínimo ancho */
+  transition: transform 0.3s;
+  /* Efecto de transformación */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  /* Efecto al pasar el mouse */
 }
 
 .card p {
-  padding: 5px;
+  padding: 15px;
   text-align: center;
+  color: #666;
+  /* Color del texto */
 }
 
 .card img {
   max-height: 170px;
+  width: 100%;
+  object-fit: cover;
+  /* Mantiene la relación de aspecto */
+  border-bottom: 2px solid #007bff;
+  /* Línea debajo de la imagen */
 }
