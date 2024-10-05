@@ -10,17 +10,19 @@ const GifGrid = ({ category }) => {
 
     return (
         <>
-            <h3 className="animate__animated animate__fadeIn"> {category} </h3>
+            <div className='category-container'>
+                <h3 className="animate__animated animate__fadeIn"> {category} </h3>
 
-            {loading && <p className="animate__animated animate__flash">Loading...</p>}
+                {loading && <p className="animate__animated animate__flash">Loading...</p>}
 
-            <div className='card-grid'>
-                {imgs.map(img => (
-                    <GifGridItem
-                        key={img.id}
-                        {...img}
-                    />
-                ))}
+                <div className='card-grid'>
+                    {imgs.map(img => (
+                        <GifGridItem
+                            key={img.id}
+                            {...img}
+                        />
+                    ))}
+                </div>
             </div>
         </>
     )
